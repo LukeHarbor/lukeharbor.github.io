@@ -1,0 +1,381 @@
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url('JetBrainsMono-Regular.woff2') format('woff2');
+}
+header {
+    position: fixed;
+    width: 100%;
+    top:0;
+    height: 10vh;
+    background: none !important;
+    padding: 1.5rem 0 0 0 !important;
+    transition: ease-in-out 200ms;
+    z-index: 900;
+}
+.logo {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%,0);
+    height: 7vh !important;
+    width: min-content;
+    z-index: 990;
+    transition: ease-in-out 200ms;
+    //border: blue 1px solid;
+}
+span, li {
+    color: white;
+    font-family: JetBrainsMono;
+    font-size: 1.4rem;
+}
+.photos, .mainphoto, .mainpBoxes, .fs, .mainClose, .photos div, .mainphoto div, .mainpBoxes div, .fs div, .mainClose div {
+    width: 100%;
+    height: 100%;
+    //max-height: 80vh;
+    overflow: hidden;
+    background: black;
+    position: absolute;
+}
+
+.about {
+    position: relative;
+     background:black;
+     height:100vh;
+     margin-top:2vh;
+     z-index:1;
+    //border: 1px blue solid;
+}
+.photos {
+   top: -12vh !important;
+    min-height: 126vh !important;
+}
+.mainphoto {
+   
+    max-height: 100vh !important;
+    
+}
+#gradientT {
+    width: 100vw;
+    height: 10vh;
+    z-index: 20;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    background: url(data:image/svg+xml;base64,alotofcodehere);
+    background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(255,255,255,0)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(255,255,255,0) 100%);
+    background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(255,255,255,0) 100%);
+}
+#gradientD {
+    width: 100vw;
+    height: 15vh;
+    z-index: 20;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 0;
+    background: url(data:image/svg+xml;base64,alotofcodehere);
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 10%, rgba(0,0,0,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(10%,rgba(255,255,255,0)), color-stop(100%,rgba(0,0,0,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 10%,rgba(0,0,0,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,0) 10%,rgba(0,0,0,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,0) 10%,rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 10%,rgba(0,0,0,1) 100%);
+}
+.pic span {
+    width: 40%;
+    height: 40%;
+    position: absolute;
+}
+
+    .pic span:first-child, .pic span:nth-child(2) {
+        top: 0;
+    }
+
+    .pic span:first-child, .pic span:nth-child(3) {
+        left: 0;
+    }
+
+    .pic span:nth-child(2), .pic span:nth-child(4) {
+        right: 0;
+    }
+
+    .pic span:nth-child(3), .pic span:nth-child(4) {
+        bottom: 0;
+       // border: 1px blue solid;
+    }
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    width: 25vw;
+    position: relative;
+    top: 14vh;
+    left: 7%;
+    overflow: visible;
+    //transform: translateX(-50%);
+    //border: 1px blue solid;
+}
+
+    #grid > a {
+        position: relative;
+        transform-style: preserve-3d;
+        height: min-content;
+        width: 25vw;
+        transition: ease-in-out 200ms;
+        // border: 1px blue solid;
+    }
+
+        #grid > a:hover {
+            //cursor: pointer;
+            transform:scale(110%);
+        }
+
+            #grid > a:hover .title:after {
+                background-position: 0% 100%;
+            }
+
+        #grid > a .pic {
+            width: 100%;
+            position: relative;
+            overflow: visible;
+        }
+
+            #grid > a .pic > span {
+                z-index: 2;
+            }
+
+                #grid > a .pic > span ~ img {
+                    z-index: 1;
+                    transition: 0.2s;
+                    width: 100%;
+                }
+
+                #grid > a .pic > span:first-child:hover ~ img {
+                    transform: perspective(600px) rotateX(10deg) rotateY(-10deg);
+                }
+
+                #grid > a .pic > span:nth-child(2):hover ~ img {
+                    transform: perspective(600px) rotateX(10deg) rotateY(10deg);
+                }
+
+                #grid > a .pic > span:nth-child(3):hover ~ img {
+                    transform: perspective(600px) rotateX(-10deg) rotateY(-10deg);
+                }
+
+                #grid > a .pic > span:nth-child(4):hover ~ img {
+                    transform: perspective(600px) rotateX(-10deg) rotateY(10deg);
+                }
+.fotodesc {
+    margin-top: 20vh;
+    margin-left: 5vw;
+    z-index: 20;
+    background: none !important;
+    width: 40vw !important;
+    transition: ease-in-out 100ms;
+}
+    .fotodesc p {
+        color: white;
+        padding-left: 1vw;
+        background: none !important;
+        //border:blue solid 1px;
+    }
+                .about{
+                    display:flex;
+                }
+
+                .fotohide{
+                    display:none;
+                    transition:ease-in-out 100ms;
+                }
+.me h2 {
+    color: white;
+    text-align: center;
+}
+.me {
+    width: 45vw;
+    margin-left: 13vw;
+    margin-top: 20vh;
+    //border: 1px blue solid;
+}
+.me p{
+    color:white;
+    padding-left:1vw;
+    //border:blue solid 1px;
+}
+    .me .in{
+        text-align:center;
+    }
+
+
+
+
+.slider-ctr {
+    width: 700px;
+    height: 440px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -220px;
+    margin-left: -350px;
+    box-sizing: border-box;
+    border: 10px solid white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px 3px rgba(0, 0, 0, 0.15), 0 5px 20px 3px rgba(0, 0, 0, 0.1);
+}
+
+    .slider-ctr:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(to bottom, transparent 70%, rgba(0, 0, 0, 0.6) 100%);
+        background: -webkit-linear-gradient(to bottom, transparent 70%, rgba(0, 0, 0, 0.6) 100%);
+        pointer-events: none;
+        z-index: 9;
+    }
+
+.slider-control {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    width: 80px;
+    overflow: hidden;
+    border-radius: 3px;
+    box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.15);
+    z-index: 99;
+}
+
+    .slider-control .control {
+        width: 50%;
+        height: 40px;
+        display: block;
+        float: left;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+        transition: 0.3s all ease;
+        background: white;
+    }
+
+        .slider-control .control .icon {
+            pointer-events: none;
+            transition: 0.3s all ease;
+        }
+
+        .slider-control .control.disabled {
+            pointer-events: none;
+            background: #ddd;
+        }
+
+            .slider-control .control.disabled .icon {
+                opacity: 0.5;
+            }
+
+
+            .perform{
+                position:relative;
+                margin-top:100vh;
+                height:100vh;
+                width:100%;
+                overflow-x:hidden;
+                background:black;
+                z-index:20;
+            }
+
+            .perform h2{
+                text-align:center;
+                margin-top:13vh;
+            }
+.slide {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background:black;
+    justify-content:center;
+    transition: 0.45s all cubic-bezier(0.65, 0.05, 0.36, 1);
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+}
+
+    .slide:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.125);
+    }
+
+    .slide.slide-on {
+        -webkit-clip-path: inset(0 100% 0 0);
+        clip-path: inset(0 100% 0 0);
+    }
+
+   /* .slide.text-on .title {
+        transition: 0.3s all cubic-bezier(0.65, 0.05, 0.36, 1) 0.45s;
+        -webkit-clip-path: inset(0 0 0 0);
+        clip-path: inset(0 0 0 0);
+    }*/
+
+    .slide.text-on .perdesc {
+        transition: 0.3s all cubic-bezier(0.65, 0.05, 0.36, 1) 0.6s;
+        -webkit-clip-path: inset(0 0 0 0);
+        clip-path: inset(0 0 0 0);
+    }
+
+    .slide img {
+        position:absolute;
+        display: block;
+        object-fit:contain;
+        left:50%;
+        top:50%;
+        transform:translate(-50%,-50%);
+    }
+
+    .slide figcaption {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+
+    .slide .title {
+        font-size: 50px;
+        margin-bottom: 2px;
+        color: white;
+        transition: 0.3s all cubic-bezier(0.65, 0.05, 0.36, 1) 0.45s;
+        -webkit-clip-path: inset(0 0 0 100%);
+        clip-path: inset(0 0 0 100%);
+        font-weight: 400;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    .slide .perdesc {
+        font-family: JetBrainsMono; 
+        background: white;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+        font-size: 16px;
+        color: black;
+        opacity: 0.9;
+        transition: 0.3s all cubic-bezier(0.65, 0.05, 0.36, 1) 0.45s;
+        -webkit-clip-path: inset(0 0 0 100%);
+        clip-path: inset(0 0 0 100%);
+        font-weight: 300;
+        letter-spacing: 3px;
+        position: relative;
+        margin-top:20rem;
+        z-index: 9;
+    }

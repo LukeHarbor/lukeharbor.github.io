@@ -1,0 +1,27 @@
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 10vh;
+    background: none !important;
+    padding: 1.5rem 0 0 0 !important;
+    transition: ease-in-out 200ms;
+    z-index: 900;
+}
+
+.logo {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%,0);
+    height: 7vh !important;
+    width: min-content;
+    z-index: 990;
+    transition: ease-in-out 200ms;
+    //border: blue 1px solid;
+}
+
+.albuns{
+    margin-top:15vh;
+    margin-left:5vw;
+}

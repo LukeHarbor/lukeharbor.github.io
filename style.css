@@ -1,0 +1,343 @@
+*{
+    margin:0;
+}
+body{
+    background:black;
+}
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url('JetBrainsMono-Regular.woff2') format('woff2');
+}
+
+a{
+    text-decoration:none;
+    color:white;
+}
+header {
+    position: fixed;
+    width: 100%;
+    height: 7vh;
+    background: none !important;
+    padding: 2.5rem 0 0 0;
+    transition: ease-in-out 200ms;
+    z-index: 900;
+  //  border: blue 1px solid;
+}
+
+.hea_fix {
+    padding: 1.5rem 0 0 0;
+    transition:ease-in-out 200ms;
+}
+.logo {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%,0);
+    height: 13vh;
+    width: min-content;
+    z-index: 990;
+    transition: ease-in-out 200ms;
+    //border: blue 1px solid;
+}
+.disco{
+    color:white;
+}
+.activeCor{
+    color:red;
+
+}
+   /* .logo{
+        position: absolute;
+        min-width: 100%;
+        min-height: 13vh;
+        transform: translate(0%,-100%);
+        border: blue 1px solid;
+    }*/
+        .logo a:hover {
+        cursor:pointer;
+        }
+    .logo img {
+        height: 100%;
+        object-fit: contain;
+    }
+    .logo_fix{
+        height:7vh !important;
+        transition:ease-in-out 200ms;
+    }
+.logo img:hover {
+    -webkit-filter: drop-shadow(0px 0px 20px rgba(255, 0, 0, 1));
+    filter: drop-shadow(0px 0px 20px rgba(255, 0, 0, 1));
+}
+.navL {
+    background: none !important;
+    position: absolute;
+    width: 40vw;
+    //top: 2.5rem;
+    //border: blue 1px solid;
+}
+
+.navR {
+    background: none !important;
+    position: absolute;
+    width: 40vw;
+    right: 0;
+    // border: blue 1px solid;
+  //  top: 2.5rem;
+}
+
+header span, header li {
+    color: white;
+    font-family: JetBrainsMono;
+    font-size: 1.4rem !important;
+    font-weight:bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+    header span:hover, header li:hover {
+        text-shadow: 0px 0px 50px white;
+        //color: black !important;
+        //filter: drop-shadow(0px 0px 70px rgba(255, 255, 255, 1));
+    }
+
+
+    header li {
+        list-style: none;
+        margin: 0;
+    }
+
+    header ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 3rem 0 3rem;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .check {
+        position: relative;
+        width: 30px;
+        cursor: pointer;
+    }
+
+        .check::before {
+            position: absolute;
+            content: '';
+            width: 25px;
+            height: 15px;
+            background: white;
+            border-radius: 25px;
+        }
+
+
+        .check:checked::before {
+            background: red;
+        }
+
+        .check::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            width: 15px;
+            height: 15px;
+            background: black;
+            border-radius: 25px;
+            transition: ease-in-out 100ms;
+            border: 2px solid red;
+            box-sizing: border-box;
+        }
+
+        .check:checked::after {
+            left: 12px;
+            border: 2px solid white;
+        }
+
+        .check:checked ~ .EN {
+            display: none;
+        }
+
+        .check:checked ~ .PT {
+            display: block;
+        }
+
+        .check:not(:checked) ~ .EN {
+            display: block;
+        }
+
+        .check:not(:checked) ~ .PT {
+            display: none;
+        }
+
+    .hero {
+        max-width: 100%;
+        height: 100vh;
+        background: black;
+        overflow: hidden;
+    }
+
+        .hero:hover {
+            cursor: pointer;
+        }
+
+        .hero img {
+            position: absolute;
+            bottom: 0;
+            height: 100vh;
+            left: 50%;
+            transform: translate(-50%,0);
+        }
+
+            .hero img:hover {
+                filter: drop-shadow(0px 0px 30px rgba(250, 0, 0, 1));
+            }
+
+    h1, h2, h3, h6 {
+        color: white;
+        font-family: JetBrainsMono;
+    }
+
+    .player {
+        position: absolute;
+        bottom: 0vh;
+        min-width: 100%;
+        min-height: 100vh;
+        overflow: hidden;
+        //border:1px red solid;
+    }
+
+
+        .player video {
+            position: absolute;
+            width: 100vw;
+            bottom: 0;
+            // margin-top:-34%;
+            //margin-left:-2.6%;
+        }
+    /*
+#movie2 {
+    transform: rotateY(180deg),rotateZ(180deg);
+    -webkit-transform: rotate3d(1000, 0, 1, 180deg); // Safari and Chrome
+    -moz-transform: rotateY(180deg); // Firefox
+}
+.player2 {
+    position: absolute;
+    bottom: -67vh;
+    min-width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    //border:1px blue solid;
+}
+.player2 video {
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    // margin-top:-34%;
+    //margin-left:-2.6%;
+}*/
+
+
+
+    .title h1 {
+        font-size: 3rem;
+    }
+
+    .title {
+        position: absolute;
+        top: 40vh;
+        right: 10vw;
+        text-align: center;
+    }
+
+        .title:hover {
+        }
+
+.sec {
+    position: relative;
+    width: 100%;
+    //height: 100vh;
+    margin-top: 15vh;
+    background: black;
+    overflow: hidden;
+    padding-bottom: 100vh;
+}
+
+        .sec .sech1{
+            position:relative;
+//margin-left:5vw;
+margin-bottom:10vh;
+background:none;
+text-align:center;
+font-size:2rem;
+
+        }
+.dest1 {
+    position: relative;
+    width: 70vw;
+    height: 50vh;
+    background: #AE1600;
+}
+
+.dest1:empty{
+    display:none;
+}
+
+.dest2 {
+    position: relative;
+    width: 70vw;
+    height: 50vh;
+    margin-top: 5vh;
+    background: #AE1600;
+    margin-left: 40vw;
+    overflow:visible;
+    
+}
+
+.dest2 h2{
+    position:absolute;
+   font-size:1.7rem;
+    top:10.5rem;
+    left:-3.5rem;
+    transform:rotateZ(-90deg);
+}
+
+
+    .dest2 .last {
+        position: absolute;
+        left:0;
+        height: 22vw;
+        
+    }
+
+    .dest2 .disc {
+        position: absolute;
+        // margin-top: 1.7%;
+        //margin-left: 20rem;
+        right: 0;
+        height: 22vw;
+        opacity:0;
+        transform: rotateZ(-120deg);
+        transition: ease-in-out 300ms;
+    }
+
+.alast {
+    position: absolute;
+    //border: blue 1px solid;
+    height: 22vw;
+    margin-top: 1.7%;
+    margin-left: 20rem;
+    width: 22vw;
+    transition: ease-in-out 300ms;
+}
+
+    .alast:hover {
+        //transform:translateX(100%);
+        width:40vw;
+        margin-left:10rem;
+        
+    }
+
+        .alast:hover .disc {
+            transform: rotateZ(120deg);
+            
+        }

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Dans Music</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script type="text/javascript" src="gsap.js" defer></script>
+    <script type="text/javascript" src="js.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+    <a class="logo" href="index.html"><img src="imgs/logo.png" /></a>
+
+
+
+    <header class="hea">
+        <div class="navL">
+
+            <ul class="PT">
+                <li><a href="eventos.html">EVENTOS</a></li>
+                <li><a href="discografia.html">DISCOGRAFIA</a></li>
+                <li><a href="projetos.html">PROJETOS</a></li>
+            </ul>
+            <ul class="EN hide">
+                <li><a href="eventos.html">EVENTS</a></li>
+                <li><a href="discografia.html">DISCOGRAPHY</a></li>
+                <li><a href="projetos.html">PROJETCS</a></li>
+            </ul>
+        </div>
+
+
+
+
+        <div class="navR">
+
+            <ul>
+                <li class="PT"><a href="biografia.html">BIOGRAFIA</a></li>
+                <li class="PT"><a href="contactos.html">CONTACTOS </a></li>
+
+                <li class="EN hide"><a href="biografia.html">BIOGRAPHY</a></li>
+                <li class="EN hide"><a href="contactos.html">CONTACTS</a></li>
+                <li>
+                    <span class="tog LPT">PT</span>
+                    <input type="checkbox" class="check tog" />
+                    <span class="tog LEN">EN</span>
+                </li>
+
+            </ul>
+
+
+
+        </div>
+
+
+    </header>
+
+    <div class="hero" onclick="document.getElementById('movie').paused ? document.getElementById('movie').play() : document.getElementById('movie').pause(); arguments[0].preventDefault();
+document.getElementById('movie2').paused ? document.getElementById('movie2').play() : document.getElementById('movie2').pause(); arguments[0].preventDefault();">
+
+        <div class="player">
+
+            <video id="movie">
+                <source type="video/webm" src="player.mp4">
+            </video>
+        </div>
+       <!-- <div class="player2">
+
+            <video id="movie2">
+                <source type="video/webm" src="player.mp4">
+            </video>
+        </div>-->
+        <img src="ferro3.png" />
+
+        <div class="title PT">
+            <h1>
+                O SOM DA
+            </h1>
+            <h1>
+                ILHA DO PICO
+            </h1>
+            <h6>(CLICA PARA DEMO)</h6>
+        </div>
+
+
+        <div class="title EN hide">
+            <h1>
+                THE BEAT OF
+            </h1>
+            <h1>
+                PICO ISLAND
+            </h1>
+            <h6>(CLICK FOR DEMO)</h6>
+        </div>
+    </div>
+
+    <div class="sec">
+        <h2 class="sech1">DESTAQUE</h2>
+        <div class="dest1"><!----></div>
+
+        <div class="dest2">
+            <h2>Último lançamento</h2>
+            <div class="alast">
+                <a href="https://www.youtube.com/watch?v=rVsChGWGMSE&list=PLxu5tFNolfzsrRgIi2OCBzsmB_JhmmSre"><img class="disc" src="imgs/disc.png" /></a>
+                <a href="https://www.youtube.com/watch?v=rVsChGWGMSE&list=PLxu5tFNolfzsrRgIi2OCBzsmB_JhmmSre"><img class="last" src="imgs/album0.jpeg" /></a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- <script type="text/processing">
+             int ra=round(random(0, 1));
+         float d;
+         void setup() {
+           size(700, 500);
+           smooth(8);
+           background(255);
+           noStroke();
+           fill(0);
+           drawTree(width/2, height - 40, 40, radians(-90));
+         }
+         void draw() {
+         }
+         void mousePressed() {
+
+           background(255);
+           drawTree(width/2, height - 40, 40, radians(-90));
+         }
+
+
+         void drawTree(float x, float y, float size, float angle) {
+           ellipse(x, y, size, size);
+           if (size>2) {
+
+             d=random(5);
+             if (d<4) {
+               fill(color(58.8, 29.4, 0));
+               ra=round(random(0, 1));
+               if (ra==1)angle+=PI/10;
+               if (ra==0)angle-=PI/10;
+
+               drawTree(
+                 x+cos(angle)*size,
+                 y+sin(angle)*size,
+                 size*0.9,
+                 angle);
+             } else {
+
+               if (d>4.5) {
+                 fill(color(0, random(50,255), 0));
+               }
+               if(d<4.5){
+                 if(ra==0)fill(color(58.8, 29.4, 0));
+                 if(ra==1)fill(color(random(150,255),0 , random(50,100)));
+               }
+
+               drawTree(
+                 x+cos(angle+ 45)*size,
+                 y+sin(angle+ 45)*size,
+                 size*0.9,
+                 angle+ 45);
+               // } else {
+               drawTree(
+                 x+cos(angle- 45)*size,
+                 y+sin(angle- 45)*size,
+                 size*0.9,
+                 angle- 45);
+               // }
+             }
+             /*         if(d<1){
+
+              // if(ra==1){
+
+              drawTree(
+              x+cos(angle- 20)*size,
+              y+sin(angle- 20)*size,
+              size*0.9,
+              angle- 20);
+              // }
+
+             /* if(ra==0){
+              drawTree(
+              x+cos(angle+ 20)*size,
+              y+sin(angle+ 20)*size,
+              size*0.9,
+              angle+ 20);
+
+              }
+
+              }*/
+           }
+         }
+
+     </script>-->
+</body>
+</html>
